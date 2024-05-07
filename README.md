@@ -41,7 +41,7 @@ If you want to enter the interactive REPL (Read-Eval-Print-Loop) add the "i" fla
 
 `> python -i simple_sql_queries.py`
 
-That will do exactly the same thing, but at the end, it starts you in the REPL (you'll know you're in the REPL when you see a >>> prompt), so you can type something like `query`, hit return, and get the value of the query variable.
+That will do exactly the same thing, but at the end, it starts you in the REPL (you'll know you're in the REPL when you see a `>>>` prompt), so you can type something like `query`, hit return, and get the value of the query variable.
 
 You can also type
 `>>> query = 'SELECT * FROM some_table LIMIT 5'`
@@ -72,7 +72,7 @@ Read the `simple_sql_queries.py` script and run it, to see it in action! Comment
 
 To use the interactive query terminal, run 
 
-`> python -i interactive.py
+`> python -i interactive.py`
 
 You should see some explanatory text and the triple prompt of the Python REPL.
 
@@ -90,7 +90,7 @@ to see the preloaded query.
 
 Assign whatever query you want to run to `q`,
 
-`> q = 'SELECT "Breed" FROM "f8ab32f7-44c7-43ca-98bf-c1b444724598" WHERE "DogName" = \'ROVER\' '
+`> q = 'SELECT "Breed" FROM "f8ab32f7-44c7-43ca-98bf-c1b444724598" WHERE "DogName" = \'ROVER\' '`
 
 and run it with the 
 
