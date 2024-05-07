@@ -92,13 +92,13 @@ to see the preloaded query.
 
 Assign whatever query you want to run to `q`,
 
-`> q = 'SELECT "Breed" FROM "f8ab32f7-44c7-43ca-98bf-c1b444724598" WHERE "DogName" = \'ROVER\' '`
+`> q = """SELECT "Breed" FROM "f8ab32f7-44c7-43ca-98bf-c1b444724598" WHERE "DogName" = 'LARRY' """`
 
 and run it with the 
 
 `> tab(run(q))`
 
-command.
+command. (Note that using three double-quotes in a row to bound the string is the easiest way of writing a Python string with both single and double quotes, since it lets you avoid escaping quotes with slashes.)
 
 One last trick:
 
