@@ -1,4 +1,6 @@
-# PYTHON SCRIPTS FOR RUNNING SQL QUERIES ON CKAN TABLES
+# query-slinger
+
+A tool and tutorial for interactive SQL queries of CKAN data tables.
 
 This README file guides you through installing Python and the necessary libraries to learn the basics of running SQL queries through API calls on data tables on a CKAN instance. (It's hard-coded to query the WPRDC open data portal, but the queried site may be changed.)
 
