@@ -39,7 +39,7 @@ and the results (basically anything the script says to print, as well as any err
 
 ## THE PYTHON REPL
 
-If you want to enter the interactive REPL (Read-Eval-Print-Loop) add the "i" flag, like this:
+If you want to enter the interactive REPL (Read-Eval-Print Loop) add the "i" flag, like this:
 
 `> python -i simple_sql_queries.py`
 
@@ -60,7 +60,7 @@ More about the REPL here: https://realpython.com/python-repl/
 
 ## ALTERNATIVES TO THE COMMAND LINE AND PYTHON REPL
 
-There are definitely other ways of editing/running Python scripts. For instance, some people 1) use Python IDEs (Integrated Developer Environments) like PyCharm (a non-free product) or 2) use Jupyter notebooks (free and open source). See https://jupyter.org/ for instructions on installing/using Jupyter.
+There are definitely other ways of editing/running Python scripts. For instance, some people 1) use [Python IDEs](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments) ([Integrated Developer Environments](https://en.wikipedia.org/wiki/Integrated_development_environment)) or 2) use Jupyter notebooks (free and open source). See https://jupyter.org/ for instructions on installing/using Jupyter.
 
 ## INTRODUCTION TO RUNNING CKAN QUERIES FROM PYTHON
 
