@@ -21,8 +21,15 @@ def write_to_csv(filename, list_of_dicts, keys=None):
         dict_writer.writeheader()
         dict_writer.writerows(list_of_dicts)
 
+def remove_key(d, key):
+    r = dict(d)
+    del r[key]
+    return r
+
 def print_table(records):
-    print(tabulate(records, headers='keys'))
+    # Suppressing _full_text column since it's generally visual junk in table output.
+    filtered_records = [remove_key(r, '_full_text') for r in records]
+    print(tabulate(filtered_records, headers='keys'))
 
 def clean_query(q):
     """Fix the query so buggy CKAN can run it."""
