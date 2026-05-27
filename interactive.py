@@ -36,7 +36,12 @@ def clean_query(q):
     import re
     return re.sub('\n', '', re.sub(';', '', q))
 
-def query_resource(query, site="https://data.wprdc.org"):
+from tenacity import retry, stop_after_attempt
+@retry(reraise=True, stop=stop_after_attempt(3))
+def do_the_query(ckan, query, offset):
+    return ckan.action.datastore_search_sql(sql=f'{query} OFFSET {offset}')
+
+def query_resource(query, site="https://data.wprdc.org", verbose=False):
     """This function queries a data table through the CKAN API, continuing to 
     increase the offset until all records have been obtained."""
     query = clean_query(query)
@@ -45,7 +50,7 @@ def query_resource(query, site="https://data.wprdc.org"):
     offset = 0
     done = False
     while not done:
-        response = ckan.action.datastore_search_sql(sql=f'{query} OFFSET {offset}')
+        response = do_the_query(ckan, query, offset)
         new_records = response['records']
         offset += len(new_records)
         records += new_records
@@ -56,6 +61,8 @@ def query_resource(query, site="https://data.wprdc.org"):
         # If the number of records returned is truncated by CKAN's 32000-record limit,
         # there's an extra field in the dictionary called 'records_truncated' with value
         # equal to True.
+        if verbose:
+            print("Got {len(records)} records so far")
 
     return records
 
