@@ -82,7 +82,7 @@ Enter
 
 `> tab(run(q))`
 
-to run the query preloaded in `q` and print the results in tabular format.
+to run the query preloaded in `q` and print the results in tabular format. (Note that the `tab` function omits the '_full_text' field, which is added to CKAN records to support search functionality.)
 
 Enter 
 
