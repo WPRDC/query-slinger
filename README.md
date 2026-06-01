@@ -22,8 +22,11 @@ Also run
 
 `> python -m pip install tabulate`
 
-to install a library for pretty-printing tables.
+to install a library for pretty-printing tables and
 
+`> python -m pip install tenacity`
+
+to install a library to retry API calls if they fail the first time.
 
 If you need to install pip, there are instructions here:
 https://pip.pypa.io/en/stable/installation/
