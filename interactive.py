@@ -23,7 +23,8 @@ def write_to_csv(filename, list_of_dicts, keys=None):
 
 def remove_key(d, key):
     r = dict(d)
-    del r[key]
+    if key in r:
+        del r[key]
     return r
 
 def print_table(records):
